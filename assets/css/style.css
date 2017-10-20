@@ -16,3 +16,30 @@ body{
     height: 250px;
     margin-bottom: 5%;
 }
+
+#text-get-started{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 24px;
+}
+
+.points{
+    height: 35px;
+}
+
+.player{
+    height: 35px;
+}
+
+.row{
+    padding-bottom: 3%;
+}
+
+#advance{
+    width:50%;
+    height: 60px;
+    background-color: maroon;
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 24px;
+    margin-left: 25%;
+}
