@@ -5,7 +5,6 @@ if (window.File && window.FileReader && window.FileList && window.Blob) {
   alert('The File APIs are not fully supported in this browser.');
 }
 
-var person = $(this).attr("data-person");
 var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
 person + "&api_key=dc6zaTOxFJmzC&limit=10";
 
