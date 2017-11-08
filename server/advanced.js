@@ -1,6 +1,7 @@
 const express = require('express');
 var request = require('request');
 var cheerio = require('cheerio');
+var server = require('./server.js');
 
 var exports = module.exports = {};
 
@@ -12,7 +13,7 @@ var advancedStats = [];
 //     return advanced;
 // }
 
-exports.getAdvanced = function(first, last, callback){
+exports.getAdvanced = function(first, last, callback, simple){
 
     var letter = first.substring(0,1);
     var firstTwo = first.substring(0,2);
@@ -56,14 +57,9 @@ exports.getAdvanced = function(first, last, callback){
             });
 
             advancedStats.push(usage_array, rebound_array, assist_array, minutes_array);
-            console.log('testing');
+            // console.log(advancedStats);
         } 
+    callback(advancedStats, 0, 0, 0, simple);
     })
-    callback();
-}
-
-exports.send = function(){
-    console.log(advancedStats);
-    return advancedStats;
 }
 

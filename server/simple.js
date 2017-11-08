@@ -4,7 +4,7 @@ var cheerio = require('cheerio');
 
 var exports = module.exports = {};
 
-exports.getSimple = function(first, last){
+exports.getSimple = function(first, last, callback, resolve){
 
     var letter = first.substring(0,1);
     var firstTwo = first.substring(0,2);
@@ -67,7 +67,7 @@ exports.getSimple = function(first, last){
             });
 
             simpleStats.push(points_array, rebound_array, assist_array, threes_array, steals_array, blocks_array, to_array);
-            return simpleStats;
+            callback(simpleStats , 1, callback, resolve);
         }
     })
 }
